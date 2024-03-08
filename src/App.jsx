@@ -10,7 +10,9 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element={''} />
-      <Route path='/rutas' element={<Rutas />} />
+      <Route path='/katherine' element={<Rutas />} />
+      <Route path='/Robert' element={<Rutas />} />
+      <Route path='/todalaruta' element={<Rutas />} />
     </Routes>
       </Router>
     </main>

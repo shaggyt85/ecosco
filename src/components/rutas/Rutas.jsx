@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import data from '../../dummy/data'
 import CopyButtom from '../copyButtom/CopyButtom';
 
 const Rutas = () => {
   const [calles, setCalles] = useState(data);
+  const [wordFromUrl, setWordFromUrl] = useState('');
+
+  useEffect(() => {
+    const url = window.location.href;
+    const urlParts = new URL(url).pathname.split('/');
+    const word = urlParts[1];
+    setWordFromUrl(word);
+  }, []);
 
   const handleChange = (calle, value) => {
     setCalles((prevCalles) => {
@@ -20,8 +28,7 @@ const Rutas = () => {
     <section className='divide-y divide-gray-100 m-12 '>
       <div className='flex justify-center'>
         <div className='flex justify-between gap-x-6 py-5'>
-        <label>Usuario:</label>
-        <input type="text" placeholder='Agrega el nombre' />
+        <h3>Usuario: {wordFromUrl} </h3>
         </div>
       </div>
       {Object.keys(calles).map((calle) => (
