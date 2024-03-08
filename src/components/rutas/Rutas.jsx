@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import data from '../../dummy/data'
+import CopyButtom from '../copyButtom/CopyButtom';
 
 const Rutas = () => {
   const [calles, setCalles] = useState(data);
@@ -37,6 +38,7 @@ const Rutas = () => {
       <div className='flex justify-center'>
         <h2>Total: {sumarCalles()}</h2>
       </div>
+      <CopyButtom />
     </section>
   );
 };
