@@ -24,7 +24,7 @@ const Navbar = () => {
       >
         <p className="blue-gradient_text">RM</p>
       </NavLink>
-      <nav className="flex text-lg gap-7 font-medium">
+      {/* <nav className="flex text-lg gap-7 font-medium">
         <NavLink
           to="/rutas"
           className={({ isActive }) =>
@@ -32,8 +32,8 @@ const Navbar = () => {
           }
         >
           Rutas
-        </NavLink>
-      </nav>
+        </NavLink> */}
+      {/* </nav> */}
       <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
         <span>Rutas</span>
@@ -58,10 +58,10 @@ const Navbar = () => {
                     <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                   </div>
                   <div className="flex items-center justify-center ">
-                    <a href={item.href} className="font-semibold text-gray-900">
+                    <NavLink to={item.href} className="font-semibold text-gray-900">
                       {item.name}
                       <span className="absolute inset-0" />
-                    </a>
+                    </NavLink>
                     <p className="mt-1 text-gray-600">{item.description}</p>
                   </div>
                 </div>
