@@ -7,7 +7,7 @@ const Rutas = () => {
 
   const handleChange = (calle, value) => {
     setCalles((prevCalles) => {
-      return { ...prevCalles, [calle]: value === '' ? '' : parseInt(value) || 0 };
+      return { ...prevCalles, [calle]: parseInt(value) || 0 };
     });
   };
 
