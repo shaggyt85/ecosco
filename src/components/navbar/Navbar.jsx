@@ -10,9 +10,9 @@ import {
 
 
 const rutas = [
-  { name: 'Katherine', description: '', href: 'katherine', icon: IdentificationIcon },
-  { name: 'Robert', description: '', href: 'robert', icon: CursorArrowRaysIcon },
-  { name: 'Allruta', description: "", href: 'todalaruta', icon: FingerPrintIcon },
+  { name: 'Katherine', description: '', to: 'katherine', icon: IdentificationIcon },
+  { name: 'Robert', description: '', to: 'robert', icon: CursorArrowRaysIcon },
+  { name: 'Allruta', description: "", to: 'todalaruta', icon: FingerPrintIcon },
 ]
 
 const Navbar = () => {
@@ -24,22 +24,11 @@ const Navbar = () => {
       >
         <p className="blue-gradient_text">RM</p>
       </NavLink>
-      {/* <nav className="flex text-lg gap-7 font-medium">
-        <NavLink
-          to="/rutas"
-          className={({ isActive }) =>
-            isActive ? "text-blue-500" : "text-black"
-          }
-        >
-          Rutas
-        </NavLink> */}
-      {/* </nav> */}
       <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
         <span>Rutas</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
       </Popover.Button>
-
       <Transition
         as={Fragment}
         enter="transition ease-out duration-200"
@@ -58,7 +47,7 @@ const Navbar = () => {
                     <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                   </div>
                   <div className="flex items-center justify-center ">
-                    <NavLink to={item.href} className="font-semibold text-gray-900">
+                    <NavLink to={item.to} className="font-semibold text-gray-900">
                       {item.name}
                       <span className="absolute inset-0" />
                     </NavLink>

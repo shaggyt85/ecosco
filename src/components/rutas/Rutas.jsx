@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import data from '../../dummy/data'
+import {calles} from '../../dummy/data'
 import CopyButtom from '../copyButtom/CopyButtom';
 
 const Rutas = () => {
-  const [calles, setCalles] = useState(data);
+  const [katherine, setCalles] = useState(calles);
   const [wordFromUrl, setWordFromUrl] = useState('');
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Rutas = () => {
   };
 
   const sumarCalles = () => {
-    const total = Object.values(calles).reduce((acc, curr) => acc + curr, 0);
+    const total = Object.values(katherine).reduce((acc, curr) => acc + curr, 0);
     return total;
   };
 
@@ -31,12 +31,12 @@ const Rutas = () => {
         <h3>Usuario: {wordFromUrl} </h3>
         </div>
       </div>
-      {Object.keys(calles).map((calle) => (
+      {Object.keys(katherine).map((calle) => (
         <div key={calle} className='flex justify-between gap-x-6 py-5'>
           <label htmlFor={calle}>{calle}:</label>
           <input
             type="number"
-            value={calles[calle]}
+            value={katherine[calle]}
             onChange={(e) => handleChange(calle, e.target.value)}
             placeholder='0'
           />
