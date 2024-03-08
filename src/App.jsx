@@ -1,5 +1,6 @@
 import Navbar from './components/navbar/Navbar'
 import {Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import Rutas from './components/rutas/Rutas'
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' element={''} />
+      <Route path='/rutas' element={<Rutas />} />
     </Routes>
       </Router>
     </main>
