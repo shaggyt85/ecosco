@@ -24,6 +24,12 @@ const Navbar = () => {
       >
         <p className="blue-gradient_text">RM</p>
       </NavLink>
+      <NavLink
+        to="peopledata"
+        className=""
+      >
+        <p className="blue-gradient_text">Data</p>
+      </NavLink>
       <Popover className="relative">
       <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
         <span>Rutas</span>
